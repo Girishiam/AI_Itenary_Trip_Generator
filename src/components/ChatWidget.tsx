@@ -52,7 +52,7 @@ export const ChatWidget = () => {
                                     <div className="flex items-center gap-4">
                                         <div className="relative">
                                             <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/20 ring-2 ring-white dark:ring-white/10">
-                                                <img src="/logo.png" alt="Bot" className="w-6 h-6 object-contain invert brightness-0" />
+                                                <img src="/logo.webp" alt="Bot" className="w-6 h-6 object-contain invert brightness-0" />
                                             </div>
                                             <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white dark:border-[#0a0a0b] rounded-full shadow-sm"></span>
                                         </div>
@@ -85,8 +85,8 @@ export const ChatWidget = () => {
                                                 </span>
                                                 <div
                                                     className={`p-4 rounded-2xl text-[14px] leading-relaxed shadow-sm ${msg.type === 'user'
-                                                            ? 'bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-tr-sm shadow-blue-500/20'
-                                                            : 'bg-white dark:bg-white/5 border border-gray-100 dark:border-white/5 text-gray-700 dark:text-gray-200 rounded-tl-sm'
+                                                        ? 'bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-tr-sm shadow-blue-500/20'
+                                                        : 'bg-white dark:bg-white/5 border border-gray-100 dark:border-white/5 text-gray-700 dark:text-gray-200 rounded-tl-sm'
                                                         }`}
                                                 >
                                                     {msg.text}
@@ -178,7 +178,7 @@ export const ChatWidget = () => {
                                     className="w-full h-full flex items-center justify-center p-3.5"
                                 >
                                     <img
-                                        src="/logo.png"
+                                        src="/logo.webp"
                                         alt="Chat"
                                         className="w-full h-full object-contain invert brightness-0 pointer-events-none select-none"
                                     />

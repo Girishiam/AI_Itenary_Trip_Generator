@@ -12,7 +12,7 @@ const STEPS = [
         color: "text-blue-400",
         gradient: "from-blue-500/20 to-cyan-500/20",
         features: ["Smart Budgeting", "Travel Style Preferences", "Group Size Handling"],
-        image: "/CardsandBanner/4.jpg"
+        image: "/CardsandBanner/4.webp"
     },
     {
         icon: Sparkles,
@@ -21,7 +21,7 @@ const STEPS = [
         color: "text-purple-400",
         gradient: "from-purple-500/20 to-violet-500/20",
         features: ["Real-time Availability", "Local Events Scanning", "Weather Prediction"],
-        image: "/CardsandBanner/5.jpg"
+        image: "/CardsandBanner/5.webp"
     },
     {
         icon: Map,
@@ -30,7 +30,7 @@ const STEPS = [
         color: "text-pink-400",
         gradient: "from-pink-500/20 to-rose-500/20",
         features: ["Hour-by-hour Plans", "Transport Logistics", "Cost Estimation"],
-        image: "/CardsandBanner/6.jpg"
+        image: "/CardsandBanner/6.webp"
     },
     {
         icon: Sliders,
@@ -39,7 +39,7 @@ const STEPS = [
         color: "text-orange-400",
         gradient: "from-orange-500/20 to-amber-500/20",
         features: ["Drag & Drop Edits", "Alternative Options", "Smart Rescheduling"],
-        image: "/CardsandBanner/7.jpg"
+        image: "/CardsandBanner/7.webp"
     },
     {
         icon: Share2,
@@ -48,7 +48,7 @@ const STEPS = [
         color: "text-emerald-400",
         gradient: "from-emerald-500/20 to-green-500/20",
         features: ["Offline PDF Access", "Google Maps Sync", "Group Sharing Link"],
-        image: "/CardsandBanner/8.jpg"
+        image: "/CardsandBanner/8.webp"
     }
 ];
 

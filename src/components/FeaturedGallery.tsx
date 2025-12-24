@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const GALLERY_ITEMS = [
     {
         id: 1,
-        image: "/CardsandBanner/1.jpg",
+        image: "/CardsandBanner/1.webp",
         location: "Fushimi Inari, Kyoto",
         user: "@hiroshi_travels",
         overview: "Walking through the thousands of vermilion torii gates at dawn.",
@@ -15,7 +15,7 @@ const GALLERY_ITEMS = [
     },
     {
         id: 2,
-        image: "/CardsandBanner/2.jpg",
+        image: "/CardsandBanner/2.webp",
         location: "Oia, Santorini",
         user: "@sophia_wanders",
         overview: "Sunset views that literally take your breath away.",
@@ -23,7 +23,7 @@ const GALLERY_ITEMS = [
     },
     {
         id: 3,
-        image: "/CardsandBanner/3.jpg",
+        image: "/CardsandBanner/3.webp",
         location: "Ubud, Bali",
         user: "@jake_explores",
         overview: "Finding peace in the lush green rice terraces.",
@@ -31,7 +31,7 @@ const GALLERY_ITEMS = [
     },
     {
         id: 4,
-        image: "/CardsandBanner/4.jpg",
+        image: "/CardsandBanner/4.webp",
         location: "Zermatt, Switzerland",
         user: "@alpine_amy",
         overview: "The Matterhorn standing tall against the clear blue sky.",
@@ -39,7 +39,7 @@ const GALLERY_ITEMS = [
     },
     {
         id: 5,
-        image: "/CardsandBanner/5.jpg",
+        image: "/CardsandBanner/5.webp",
         location: "Marrakech Medina",
         user: "@omar_vibes",
         overview: "Lost in the colorful chaos of the souks.",
@@ -47,7 +47,7 @@ const GALLERY_ITEMS = [
     },
     {
         id: 6,
-        image: "/CardsandBanner/6.jpg",
+        image: "/CardsandBanner/6.webp",
         location: "Manhattan, NYC",
         user: "@city_dreams",
         overview: "The city that never sleeps, captured from above.",

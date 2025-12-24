@@ -8,7 +8,7 @@ const SUGGESTIONS = [
     {
         id: 1,
         destination: "Kyoto, Japan",
-        image: "/CardsandBanner/1.jpg",
+        image: "/CardsandBanner/1.webp",
         price: "$2,400",
         days: "7 Days",
         travelers: "2 People",
@@ -19,7 +19,7 @@ const SUGGESTIONS = [
     {
         id: 2,
         destination: "Santorini, Greece",
-        image: "/CardsandBanner/2.jpg",
+        image: "/CardsandBanner/2.webp",
         price: "$3,200",
         days: "5 Days",
         travelers: "Couple",
@@ -30,7 +30,7 @@ const SUGGESTIONS = [
     {
         id: 3,
         destination: "Bali, Indonesia",
-        image: "/CardsandBanner/3.jpg",
+        image: "/CardsandBanner/3.webp",
         price: "$1,800",
         days: "10 Days",
         travelers: "Group (4)",
@@ -41,7 +41,7 @@ const SUGGESTIONS = [
     {
         id: 4,
         destination: "Swiss Alps",
-        image: "/CardsandBanner/4.jpg",
+        image: "/CardsandBanner/4.webp",
         price: "$4,500",
         days: "6 Days",
         travelers: "Family",
@@ -52,7 +52,7 @@ const SUGGESTIONS = [
     {
         id: 5,
         destination: "Marrakech, Morocco",
-        image: "/CardsandBanner/5.jpg",
+        image: "/CardsandBanner/5.webp",
         price: "$1,500",
         days: "6 Days",
         travelers: "Solo",
@@ -63,7 +63,7 @@ const SUGGESTIONS = [
     {
         id: 6,
         destination: "New York, USA",
-        image: "/CardsandBanner/6.jpg",
+        image: "/CardsandBanner/6.webp",
         price: "$3,000",
         days: "5 Days",
         travelers: "2 People",
@@ -74,7 +74,7 @@ const SUGGESTIONS = [
     {
         id: 7,
         destination: "Cappadocia, Turkey",
-        image: "/CardsandBanner/7.jpg",
+        image: "/CardsandBanner/7.webp",
         price: "$2,100",
         days: "5 Days",
         travelers: "Couple",

@@ -56,7 +56,7 @@ export const Navbar = () => {
                         isScrolled ? "bg-white/50 border-white/20 dark:bg-white/10 dark:border-white/10" : "bg-white/10 backdrop-blur-sm border-white/20"
                     )}>
                         <img
-                            src="/logo.png"
+                            src="/logo.webp"
                             alt="Luma Logo"
                             className="h-8 w-8 object-contain drop-shadow-md"
                         />

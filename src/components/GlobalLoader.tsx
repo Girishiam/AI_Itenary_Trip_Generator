@@ -41,7 +41,7 @@ export const GlobalLoader = () => {
                         >
                             <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full blur-[40px] opacity-40 animate-pulse" />
                             <img
-                                src="/logo.png"
+                                src="/logo.webp"
                                 alt="Luma"
                                 className="relative z-10 w-full h-full object-contain filter brightness-110 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
                             />

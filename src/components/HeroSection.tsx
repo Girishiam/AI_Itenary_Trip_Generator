@@ -6,19 +6,19 @@ import { Link } from 'react-router-dom';
 const SLIDES = [
     {
         id: 1,
-        image: '/CardsandBanner/1.jpg',
+        image: '/CardsandBanner/1.webp',
         title: "Discover Your Next Adventure",
         subtitle: "AI-curated trips tailored to your style, budget, and dreams."
     },
     {
         id: 2,
-        image: '/CardsandBanner/2.jpg',
+        image: '/CardsandBanner/2.webp',
         title: "Experience the Extraordinary",
         subtitle: "From hidden gems to iconic landmarks, see the world differently."
     },
     {
         id: 3,
-        image: '/CardsandBanner/3.jpg',
+        image: '/CardsandBanner/3.webp',
         title: "Plan Less, Explore More",
         subtitle: "Let our intelligent algorithms handle the logistics for you."
     }

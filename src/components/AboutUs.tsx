@@ -20,7 +20,7 @@ export const AboutUs = () => {
                 >
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
                     <img
-                        src="/about_us2.jpg"
+                        src="/about_us2.webp"
                         alt="Luma Team"
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     />

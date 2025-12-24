@@ -3,7 +3,7 @@
 export const mockExoticTrip = {
     meta: {
         destination: "Bali, Indonesia",
-        image: "/CardsandBanner/3.jpg",
+        image: "/CardsandBanner/3.webp",
         duration: "5 Days",
         travelers: "2 Adults",
         dates: "May 10 - May 15, 2025",
@@ -54,23 +54,23 @@ export const mockExoticTrip = {
         }
     ],
     facts: [
-        { title: "The World's Priciest Coffee", desc: "Kopi Luwak is produced here. The beans are eaten and digested by the Asian palm civet, giving the coffee a uniquely smooth flavor profile.", image: "/CardsandBanner/7.jpg" },
-        { title: "Day of Silence", desc: "During 'Nyepi', the entire island shuts down for 24 hours. No flights, no electricity, no noise. It's a profound day of self-reflection.", image: "/CardsandBanner/8.jpg" },
-        { title: "Tri Hita Karana", desc: "The Balinese philosophy of life: harmony with God, harmony with people, and harmony with nature.", image: "/CardsandBanner/2.jpg" } // existing image reuse
+        { title: "The World's Priciest Coffee", desc: "Kopi Luwak is produced here. The beans are eaten and digested by the Asian palm civet, giving the coffee a uniquely smooth flavor profile.", image: "/CardsandBanner/7.webp" },
+        { title: "Day of Silence", desc: "During 'Nyepi', the entire island shuts down for 24 hours. No flights, no electricity, no noise. It's a profound day of self-reflection.", image: "/CardsandBanner/8.webp" },
+        { title: "Tri Hita Karana", desc: "The Balinese philosophy of life: harmony with God, harmony with people, and harmony with nature.", image: "/CardsandBanner/2.webp" } // existing image reuse
     ],
     flights: [
         { airline: "Singapore Airlines", time: "08:45 AM - 03:20 PM", duration: "6h 35m", price: "$600", type: "Premium Economy", logo: "SQ", desc: "Award-winning service with layover in Changi." },
         { airline: "Qatar Airways", time: "10:15 AM - 05:30 PM", duration: "7h 15m", price: "$550", type: "Standard", logo: "QR", desc: "Best value for long-haul comfort." }
     ],
     hotels: [
-        { name: "The Kayon Jungle Resort", rating: 5.0, price: "$350/night", image: "/CardsandBanner/3.jpg", location: "Ubud, Bali", desc: "Famous for its three-tiered infinity pool inspired by the Tegalalang Rice Terraces." },
-        { name: "Ayana Resort", rating: 4.8, price: "$420/night", image: "/CardsandBanner/2.jpg", location: "Jimbaran, Bali", desc: "Home to the iconic Rock Bar, perched on natural rocks 14 meters above the Indian Ocean." }
+        { name: "The Kayon Jungle Resort", rating: 5.0, price: "$350/night", image: "/CardsandBanner/3.webp", location: "Ubud, Bali", desc: "Famous for its three-tiered infinity pool inspired by the Tegalalang Rice Terraces." },
+        { name: "Ayana Resort", rating: 4.8, price: "$420/night", image: "/CardsandBanner/2.webp", location: "Jimbaran, Bali", desc: "Home to the iconic Rock Bar, perched on natural rocks 14 meters above the Indian Ocean." }
     ],
     topActivities: [
         {
             id: 1,
             title: "Uluwatu Temple Sunset",
-            image: "/CardsandBanner/1.jpg",
+            image: "/CardsandBanner/1.webp",
             price: "$30",
             duration: "3 Hours",
             rating: 4.9,
@@ -79,7 +79,7 @@ export const mockExoticTrip = {
         {
             id: 2,
             title: "Tegalalang Rice Terrace Swing",
-            image: "/CardsandBanner/3.jpg",
+            image: "/CardsandBanner/3.webp",
             price: "$15",
             duration: "2 Hours",
             rating: 4.7,
@@ -88,7 +88,7 @@ export const mockExoticTrip = {
         {
             id: 3,
             title: "Sacred Monkey Forest",
-            image: "/CardsandBanner/4.jpg",
+            image: "/CardsandBanner/4.webp",
             price: "$10",
             duration: "2 Hours",
             rating: 4.5,
@@ -97,7 +97,7 @@ export const mockExoticTrip = {
         {
             id: 4,
             title: "Nusa Penida Boat Trip",
-            image: "/CardsandBanner/2.jpg",
+            image: "/CardsandBanner/2.webp",
             price: "$85",
             duration: "Full Day",
             rating: 4.8,
@@ -121,7 +121,7 @@ export const suggestions: Destination[] = [
         id: 1,
         title: "Kyoto, Japan",
         location: "Japan",
-        image: "/CardsandBanner/1.jpg",
+        image: "/CardsandBanner/1.webp",
         price: "$2,400",
         rating: 4.8,
         description: "Experience the ancient temples, traditional tea ceremonies, and stunning cherry blossoms of Japan's cultural capital."
@@ -130,7 +130,7 @@ export const suggestions: Destination[] = [
         id: 2,
         title: "Santorini, Greece",
         location: "Greece",
-        image: "/CardsandBanner/2.jpg",
+        image: "/CardsandBanner/2.webp",
         price: "$3,200",
         rating: 4.9,
         description: "Watch famous sunsets over blue-domed churches and white-washed buildings in this romantic island paradise."
@@ -139,7 +139,7 @@ export const suggestions: Destination[] = [
         id: 3,
         title: "Bali, Indonesia",
         location: "Indonesia",
-        image: "/CardsandBanner/3.jpg",
+        image: "/CardsandBanner/3.webp",
         price: "$1,800",
         rating: 4.7,
         description: "Find your zen in lush rice terraces, sacred monkey forests, and pristine beaches."
@@ -148,7 +148,7 @@ export const suggestions: Destination[] = [
         id: 4,
         title: "Swiss Alps",
         location: "Switzerland",
-        image: "/CardsandBanner/4.jpg",
+        image: "/CardsandBanner/4.webp",
         price: "$4,500",
         rating: 5.0,
         description: "Ski through powdery slopes and enjoy cozy chalets in the breathtaking mountain ranges."
@@ -157,7 +157,7 @@ export const suggestions: Destination[] = [
         id: 5,
         title: "Marrakech, Morocco",
         location: "Morocco",
-        image: "/CardsandBanner/5.jpg",
+        image: "/CardsandBanner/5.webp",
         price: "$1,500",
         rating: 4.6,
         description: "Get lost in the vibrant souks, intricate palaces, and sensory overload of the Red City."
@@ -166,7 +166,7 @@ export const suggestions: Destination[] = [
         id: 6,
         title: "New York, USA",
         location: "USA",
-        image: "/CardsandBanner/6.jpg",
+        image: "/CardsandBanner/6.webp",
         price: "$3,000",
         rating: 4.8,
         description: "The city that never sleeps offers world-class dining, theater, and iconic landmarks at every turn."

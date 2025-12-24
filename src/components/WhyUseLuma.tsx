@@ -89,7 +89,7 @@ export const WhyUseLuma = () => {
                 <div className="flex-1 relative w-full h-[600px] rounded-3xl overflow-hidden shadow-2xl group">
                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-purple-600/20 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity duration-700" />
                     <img
-                        src="/about_us.jpg"
+                        src="/about_us.webp"
                         alt="Travelers exploring"
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
