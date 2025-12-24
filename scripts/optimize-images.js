@@ -46,6 +46,8 @@ async function main() {
         } else if (file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.jpeg')) {
             // Other random jpgs
             await optimizeImage(path.join(PUBLIC_DIR, file), 1200);
+        } else if (file === 'logo.png') {
+            await optimizeImage(path.join(PUBLIC_DIR, file), 128);
         }
     }
 
