@@ -5,19 +5,10 @@ export const GlobalLoader = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Check if user has visited in this session
-        const hasVisited = sessionStorage.getItem('hasVisited');
-
-        if (hasVisited) {
-            setIsLoading(false);
-            return;
-        }
-
-        // Simulating resource loading for first visit
+        // Always show loader on mount/reload
         const timer = setTimeout(() => {
             setIsLoading(false);
-            sessionStorage.setItem('hasVisited', 'true');
-        }, 2200);
+        }, 3500);
 
         return () => clearTimeout(timer);
     }, []);
