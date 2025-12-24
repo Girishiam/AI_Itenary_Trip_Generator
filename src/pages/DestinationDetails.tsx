@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { MapPin, Star, ArrowRight, DollarSign, Calendar, Sparkles, ArrowLeft } from 'lucide-react';
+import { MapPin, Star, DollarSign, Calendar, Sparkles, ArrowLeft } from 'lucide-react';
 import { suggestions } from '../data/mockData';
 import { GlassCard } from '../components/ui/GlassCard';
 import { Footer } from '../components/Footer';

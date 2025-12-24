@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Play, CheckCircle, ArrowRight, Sparkles, Monitor, Search, Calendar, Plane } from 'lucide-react';
+import { Play, ArrowRight, Sparkles, Monitor, Search, Plane } from 'lucide-react';
 import { GlassCard } from '../components/ui/GlassCard';
 import { Link } from 'react-router-dom';
 import { Footer } from '../components/Footer';

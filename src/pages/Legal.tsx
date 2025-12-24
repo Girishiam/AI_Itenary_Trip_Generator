@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, FileText, CheckCircle, AlertCircle, HelpCircle, ArrowLeft } from 'lucide-react';
+import { Lock, Eye, FileText, ArrowLeft } from 'lucide-react';
 import { GlassCard } from '../components/ui/GlassCard';
 import { Footer } from '../components/Footer';
 import { Link } from 'react-router-dom';
