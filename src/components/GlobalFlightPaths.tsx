@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plane, Cloud } from 'lucide-react';
 
-export const GlobalFlightPaths = () => {
+export const GlobalFlightPaths = memo(() => {
     const [flights, setFlights] = useState<{ id: number, start: { x: number, y: number }, end: { x: number, y: number }, duration: number }[]>([]);
 
     useEffect(() => {
@@ -41,7 +41,7 @@ export const GlobalFlightPaths = () => {
 
         const interval = setInterval(() => {
             if (Math.random() > 0.35) spawnFlight();
-        }, 3000);
+        }, 4000); // Increased to 4000ms for better performance balance
 
         // Initial spawn
         spawnFlight();
@@ -50,9 +50,12 @@ export const GlobalFlightPaths = () => {
     }, []);
 
     return (
-        <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden select-none">
+        <div
+            className="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none"
+            style={{ contain: 'strict' }} // CSS Containment to isolate from layout thrashing
+        >
             {/* Clouds Layer - High visibility */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0" style={{ willChange: 'transform' }}> {/* Hint for compositor */}
                 <CloudFloater top="10%" speed={90} scale={1.2} opacity={0.6} />
                 <CloudFloater top="25%" speed={120} scale={0.8} opacity={0.5} />
                 <CloudFloater top="40%" speed={150} scale={0.6} opacity={0.4} />
@@ -69,7 +72,7 @@ export const GlobalFlightPaths = () => {
             </AnimatePresence>
         </div>
     );
-};
+});
 
 const CloudFloater = ({ top, speed, scale, opacity, color }: { top: string, speed: number, scale: number, opacity: number, color?: string }) => (
     <motion.div
@@ -81,9 +84,9 @@ const CloudFloater = ({ top, speed, scale, opacity, color }: { top: string, spee
             ease: "linear"
         }}
         className={`absolute ${color || 'text-blue-100 dark:text-gray-700'}`}
-        style={{ top, transform: `scale(${scale})` }}
+        style={{ top, transform: `scale(${scale})`, willChange: 'transform' }} // Added will-change
     >
-        <Cloud className="fill-current w-32 h-16 blur-sm" />
+        <Cloud className="fill-current w-32 h-16" /> {/* Removed blur-sm */}
     </motion.div>
 );
 
@@ -114,6 +117,7 @@ const FlightAnimation = ({ flight }: { flight: any }) => {
                 ease: "linear",
                 times: [0, 0.1, 0.9, 1]
             }}
+            style={{ willChange: 'transform' }} // Optimization: Promote to own layer
         >
             <div className="relative flex items-center justify-center w-12 h-12">
                 {/* 

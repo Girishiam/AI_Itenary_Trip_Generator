@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Instagram, Linkedin, Send, MapPin, Mail, Phone } from 'lucide-react';
 import { GlassCard } from './ui/GlassCard';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
     return (
@@ -12,14 +13,14 @@ export const Footer = () => {
 
                     {/* Brand Section */}
                     <div className="space-y-6">
-                        <div className="flex items-center gap-2">
-                            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold text-xl">
+                        <Link to="/" className="flex items-center gap-2 group">
+                            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition-transform">
                                 L
                             </div>
                             <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
                                 Luma
                             </span>
-                        </div>
+                        </Link>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                             Crafting unforgettable journeys with the power of Artificial Intelligence. Your world, discovered.
                         </p>
@@ -35,10 +36,10 @@ export const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-6">Explore</h4>
                         <ul className="space-y-4">
-                            <FooterLink href="/">Home</FooterLink>
-                            <FooterLink href="/about">About Us</FooterLink>
-                            <FooterLink href="/gallery">Gallery</FooterLink>
-                            <FooterLink href="/destinations">Destinations</FooterLink>
+                            <FooterLink to="/">Home</FooterLink>
+                            <FooterLink to="/about">About Us</FooterLink>
+                            <FooterLink to="/gallery">Gallery</FooterLink>
+                            <FooterLink to="/destinations">Destinations</FooterLink>
                         </ul>
                     </div>
 
@@ -67,15 +68,17 @@ export const Footer = () => {
                         <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
                             Subscribe for latest travel trends and exclusive offers.
                         </p>
-                        <GlassCard className="p-1 flex items-center bg-white/5 border-white/10">
-                            <input
-                                type="email"
-                                placeholder="Your email..."
-                                className="bg-transparent border-none outline-none text-gray-900 dark:text-white px-4 py-2 w-full placeholder:text-gray-500"
-                            />
-                            <button className="p-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-90 transition-opacity">
-                                <Send className="w-4 h-4" />
-                            </button>
+                        <GlassCard className="p-1 pr-2 bg-white/5 border-white/10 overflow-hidden">
+                            <div className="flex items-center gap-2 w-full">
+                                <input
+                                    type="email"
+                                    placeholder="Your email..."
+                                    className="flex-1 bg-transparent border-none outline-none text-gray-900 dark:text-white px-4 py-2 min-w-0 placeholder:text-gray-500"
+                                />
+                                <button className="shrink-0 p-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-90 transition-opacity">
+                                    <Send className="w-4 h-4" />
+                                </button>
+                            </div>
                         </GlassCard>
                     </div>
                 </div>
@@ -86,9 +89,9 @@ export const Footer = () => {
                         © {new Date().getFullYear()} Luma AI. All rights reserved.
                     </p>
                     <div className="flex gap-6 text-sm text-gray-500 dark:text-gray-400">
-                        <a href="#" className="hover:text-blue-500 transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-blue-500 transition-colors">Terms of Service</a>
-                        <a href="#" className="hover:text-blue-500 transition-colors">Cookie Policy</a>
+                        <Link to="/privacy" className="hover:text-blue-500 transition-colors">Privacy Policy</Link>
+                        <Link to="/terms" className="hover:text-blue-500 transition-colors">Terms of Service</Link>
+                        <Link to="/cookies" className="hover:text-blue-500 transition-colors">Cookie Policy</Link>
                     </div>
                 </div>
             </div>
@@ -105,14 +108,15 @@ const SocialIcon = ({ icon: Icon, href }: { icon: any, href: string }) => (
     </a>
 );
 
-const FooterLink = ({ href, children }: { href: string, children: React.ReactNode }) => (
+const FooterLink = ({ to, children }: { to: string, children: React.ReactNode }) => (
     <li>
-        <a
-            href={href}
+        <Link
+            to={to}
             className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors flex items-center gap-2 group"
         >
             <span className="w-1.5 h-1.5 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
             {children}
-        </a>
+        </Link>
     </li>
 );
+

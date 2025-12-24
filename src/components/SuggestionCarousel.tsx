@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Wallet, Users, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { GlassCard } from './ui/GlassCard';
 
 const SUGGESTIONS = [
@@ -205,9 +206,12 @@ const Card = ({ item }: { item: any }) => (
                     </div>
 
                     <div className="pt-2">
-                        <button className="w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-sm shadow-lg hover:shadow-purple-500/25 transition-all active:scale-95">
+                        <Link
+                            to="/trip-plan"
+                            className="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-sm shadow-lg hover:shadow-purple-500/25 transition-all active:scale-95"
+                        >
                             View Itinerary
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </GlassCard>

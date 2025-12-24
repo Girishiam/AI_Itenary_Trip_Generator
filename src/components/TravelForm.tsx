@@ -1,10 +1,18 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, Calendar, Users, Wallet, Plane, Hotel, Wand2 } from 'lucide-react';
+import { MapPin, Calendar, Users, Wallet, Plane, Hotel, Wand2, ArrowRight } from 'lucide-react';
 import { GlassCard } from './ui/GlassCard';
 import { cn } from '../lib/utils';
+import { useNavigate } from 'react-router-dom';
+import { LoadingScreen } from './LoadingScreen';
 
-export const TravelForm = () => {
+interface TravelFormProps {
+    className?: string;
+}
+
+export const TravelForm = ({ className }: TravelFormProps) => {
+    const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(false);
+
     const [formData, setFormData] = useState({
         destination: '',
         startDate: '',
@@ -24,8 +32,22 @@ export const TravelForm = () => {
         setFormData(prev => ({ ...prev, [key]: !prev[key] }));
     };
 
+    const handleGenerate = (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsLoading(true);
+    };
+
+    const handleLoadingComplete = () => {
+        setIsLoading(false);
+        navigate('/trip-plan');
+    };
+
+    if (isLoading) {
+        return <LoadingScreen onComplete={handleLoadingComplete} />;
+    }
+
     return (
-        <section className="relative z-20 -mt-24 px-4 pb-20 w-full flex justify-center">
+        <section className={cn("relative z-20 -mt-24 px-4 pb-20 w-full flex justify-center", className)}>
             <GlassCard className="w-full max-w-5xl bg-white/80 dark:bg-black/60 backdrop-blur-2xl border-white/40 shadow-2xl p-6 md:p-8">
                 <div className="flex flex-col gap-6">
                     {/* Header */}
@@ -118,7 +140,27 @@ export const TravelForm = () => {
                             />
                         </div>
 
-                        {/* Toggles */}
+
+                        {/* Activity Level - Now 1 column */}
+                        <div className="space-y-2">
+                            <label className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                                <span className="text-lg">🏄</span>
+                                Select Activities
+                            </label>
+                            <select
+                                name="activityLevel"
+                                value={(formData as any).activityLevel}
+                                onChange={(e) => setFormData(prev => ({ ...prev, activityLevel: e.target.value }))}
+                                className="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-purple-500 outline-none transition-all text-gray-600 dark:text-white appearance-none cursor-pointer"
+                            >
+                                <option className="dark:bg-gray-800 dark:text-white" value="Relaxation">Relaxation</option>
+                                <option className="dark:bg-gray-800 dark:text-white" value="Low Adrenalin">Low Adrenalin</option>
+                                <option className="dark:bg-gray-800 dark:text-white" value="Moderate Adrenalin">Moderate Adrenalin</option>
+                                <option className="dark:bg-gray-800 dark:text-white" value="High Adrenalin">High Adrenalin</option>
+                            </select>
+                        </div>
+
+                        {/* Toggles - Keeps 2 columns */}
                         <div className="flex gap-4 lg:col-span-2">
                             <button
                                 onClick={() => handleToggle('includeFlights')}
@@ -146,16 +188,18 @@ export const TravelForm = () => {
                                 <span className="font-medium">Hotels</span>
                             </button>
                         </div>
+                    </div>
 
-                        {/* Submit Button */}
-                        <motion.button
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="w-full px-8 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-bold text-lg shadow-lg hover:shadow-purple-500/30 transition-all flex items-center justify-center gap-2"
+                    {/* Submit Logic */}
+                    <div className="pt-8 flex justify-center w-full">
+                        <button
+                            onClick={handleGenerate}
+                            className="group relative w-full md:w-auto px-12 py-5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl font-bold text-white shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden"
                         >
-                            <SparklesIcon />
-                            Generate Trip
-                        </motion.button>
+                            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                            <span className="relative z-10 text-lg">Generate Dream Trip</span>
+                            <ArrowRight className="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform" />
+                        </button>
                     </div>
                 </div>
             </GlassCard>
@@ -163,8 +207,4 @@ export const TravelForm = () => {
     );
 };
 
-const SparklesIcon = () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="animate-pulse">
-        <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" fill="currentColor" />
-    </svg>
-);
+
